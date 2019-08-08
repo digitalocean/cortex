@@ -1,5 +1,11 @@
 ## master / unreleased
 
+* [FEATURE] You can now specify `http_config` on alert receivers #929
+* [CHANGE] Flags changed due to changes upstream in Prometheus Alertmanager #929:
+  * `alertmanager.mesh.listen-address` is now `cluster.listen-address`
+  * `alertmanager.mesh.peer.host` and `alertmanager.mesh.peer.service` can be replaced by `cluster.peer`
+  * `alertmanager.mesh.hardware-address`, `alertmanager.mesh.nickname`, `alertmanager.mesh.password`, and `alertmanager.mesh.peer.refresh-interval` all disappear.
+
 ## 0.1.0 / 2019-08-07
 
 * [CHANGE] HA Tracker flags were renamed to provide more clarity #1465
