@@ -47,6 +47,7 @@ func NewS3ObjectClient(cfg StorageConfig, schemaCfg chunk.SchemaConfig) (chunk.O
 		return nil, err
 	}
 
+	s3Config = s3Config.WithRegion("us-east-1")                    // override region with an actual region. Wont be utilized
 	s3Config = s3Config.WithS3ForcePathStyle(cfg.S3ForcePathStyle) // support for Path Style S3 url if has the flag
 
 	s3Config = s3Config.WithMaxRetries(0) // We do our own retries, so we can monitor them
