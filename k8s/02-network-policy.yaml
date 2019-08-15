@@ -1,0 +1,29 @@
+---
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+metadata:
+  name: "cortex-allow-within-namespace"
+specs:
+  - endpointSelector:
+      matchLabels: {}
+    egress:
+    - toEndpoints:
+      - matchLabels:
+          "k8s:io.kubernetes.pod.namespace": cortex
+    ingress:
+    - fromEndpoints:
+      - matchLabels:
+          "k8s:io.kubernetes.pod.namespace": cortex
+  - endpointSelector:
+      matchLabels: {}
+    egress:
+    - toEndpoints:
+      - matchLabels:
+          "k8s:io.kubernetes.pod.namespace": kube-system
+          "k8s:k8s-app": kube-dns
+  - endpointSelector:
+      matchLabels: {}
+    ingress:
+    - fromEndpoints:
+      - matchLabels:
+          "k8s:io.kubernetes.pod.namespace": ingress-nginx

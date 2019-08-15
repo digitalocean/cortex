@@ -28,7 +28,7 @@ data:
         proxy_set_header X-Scope-OrgID 0;
 
         location = /api/prom/push {
-          proxy_pass      http://distributor.default.svc.cluster.local$request_uri;
+          proxy_pass      http://distributor.cortex.svc.cluster.local$request_uri;
         }
 
         location = /ring {
@@ -39,7 +39,7 @@ data:
         }
 
         location ~ /api/prom/.* {
-          proxy_pass      http://query-frontend.default.svc.cluster.local$request_uri;
+          proxy_pass      http://query-frontend.cortex.svc.cluster.local$request_uri;
         }
       }
     }
