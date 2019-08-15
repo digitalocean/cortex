@@ -11,6 +11,8 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/aws/aws-sdk-go/service/s3/s3iface"
+	logger "github.com/cortexproject/cortex/pkg/util"
+	"github.com/go-kit/kit/log/level"
 	"github.com/prometheus/client_golang/prometheus"
 
 	"github.com/cortexproject/cortex/pkg/chunk"
@@ -132,6 +134,11 @@ func (a s3ObjectClient) putS3Chunk(ctx context.Context, key string, buf []byte) 
 			Bucket: aws.String(a.bucketName),
 			Key:    aws.String(key),
 		})
+
+		if err != nil {
+			level.Error(logger.Logger).Log("msg", "putS3Chunk failed", "bucket", a.bucketName, "key", key)
+		}
+
 		return err
 	})
 }
