@@ -9,7 +9,7 @@ require (
 	github.com/Masterminds/squirrel v0.0.0-20161115235646-20f192218cf5
 	github.com/NYTimes/gziphandler v1.1.1
 	github.com/armon/go-socks5 v0.0.0-20160902184237-e75332964ef5
-	github.com/aws/aws-sdk-go v1.15.90
+	github.com/aws/aws-sdk-go v1.34.0
 	github.com/bitly/go-hostpool v0.0.0-20171023180738-a3a6125de932 // indirect
 	github.com/blang/semver v3.5.0+incompatible
 	github.com/bmizerany/assert v0.0.0-20160611221934-b7ed37b82869 // indirect
@@ -53,7 +53,7 @@ require (
 	github.com/opentracing-contrib/go-stdlib v0.0.0-20170113013457-1de4cc2120e7
 	github.com/opentracing/opentracing-go v1.1.0
 	github.com/philhofer/fwd v0.0.0-20160129035939-98c11a7a6ec8 // indirect
-	github.com/pkg/errors v0.8.1
+	github.com/pkg/errors v0.9.1
 	github.com/prometheus/alertmanager v0.12.1-0.20190731170042-6e135a0112f5
 	github.com/prometheus/client_golang v1.0.0
 	github.com/prometheus/common v0.4.1
@@ -63,7 +63,7 @@ require (
 	github.com/sercand/kuberesolver v2.1.0+incompatible // indirect
 	github.com/sirupsen/logrus v1.4.2 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
-	github.com/stretchr/testify v1.3.0
+	github.com/stretchr/testify v1.5.1
 	github.com/tinylib/msgp v0.0.0-20161221055906-38a6f61a768d // indirect
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20190109142713-0ad062ec5ee5 // indirect
 	github.com/uber-go/atomic v1.3.2 // indirect
@@ -77,7 +77,7 @@ require (
 	go.etcd.io/etcd v0.0.0-20190709142735-eb7dd97135a5
 	go.uber.org/zap v1.10.0 // indirect
 	golang.org/x/crypto v0.0.0-20190530122614-20be4c3c3ed5 // indirect
-	golang.org/x/net v0.0.0-20190404232315-eb5bcb51f2a3
+	golang.org/x/net v0.0.0-20200202094626-16171245cfb2
 	golang.org/x/sys v0.0.0-20190602015325-4c4f7f33c9ed // indirect
 	golang.org/x/text v0.3.2 // indirect
 	golang.org/x/time v0.0.0-20181108054448-85acf8d2951c
